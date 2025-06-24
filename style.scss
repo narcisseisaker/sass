@@ -1,0 +1,49 @@
+$primary-color: skyblue;
+$secondary-color: white;
+$tertiary-color: black;
+$border-raduis: 5px;
+$small: 14px;
+$medium: 16px;
+$large: 14px;
+$padding: 15px;
+$margin-bottom: 100px;
+
+
+
+@mixin mixin-card($color, $radius: 10px) {
+   
+    border-radius: 10px;
+    box-shadow: 6px 6px 25px $color;
+
+}
+.card{
+    @include mixin-card($primary-color, $border-raduis);
+    background-color: $secondary-color;
+    padding: $padding;
+    border-radius: $border-raduis;
+    margin-bottom: $margin-bottom;
+    color: $tertiary-color;
+    width: 50%;
+    margin: 30px auto;
+    .card-header{
+        font-size: 22px;
+        font-weight: bold;
+        color: $primary-color;
+        text-align: center;
+    }
+    .card-body{
+        text-align: center;
+    }
+    .card-footer{
+        background-color: $primary-color;
+        text-align: center;
+        padding: 20px;
+        button{
+            background-color: $secondary-color;
+            width: 100px;
+            height: 30px;
+            color: $primary-color;
+            border-radius: $border-raduis;
+        }
+    }
+}
